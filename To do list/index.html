@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=josefin+Sans&display=swap">
+        <title>
+            My To-do list
+        </title>
+    </head>
+
+    <body>
+        <br> 
+
+        <h1>My to do list</h1>
+
+        <br><br> 
+        <form action="">
+            <input type="text" placeholder="Enter your task"   class ="to-do_get">
+            <button type="submit" class ="to-do_sub"> </button>
+
+            <div class="select">
+                <select name="todos" class="filter_todo">
+                    <option value = "all">All</option>
+                    <option value = "completed">Completed</option>
+                    <option value = "incompleted">Incompleted</option>
+                </select>
+            </div>
+        </form>
+
+        <div class = "todo_container">
+            <ul class ="todo_list"></ul>
+        </div>
+
+        <script> src = "./script.js"</script>
+
+    </body>
+</html>
