@@ -1,151 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-*{
-    margin: auto;
-    padding: 0%;
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 20px;
 }
 
-body{
-   background-color: darkgray;
-   color: aliceblue;
-   font-family: 'Josefin Sans', sans-serif;
-   min-height: 10vh;
-   
+h1 {
+  text-align: center;
+  color: #fbf6f6;
 }
 
-h1{
-    color: crimson;
-    text-align: center;
-}
-
-form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-form input, 
+form input,
 form button {
-    padding: 0.5rem;
-    padding-left: 1rem;
-    font-size: 1.8rem;
-    font-family: 'josefin sans', sans-serif;
-    border-color: black;
-    background: rgb(187, 235, 11);
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: all 0.3 ease;
-    margin-left: 0.5rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+  font-family: 'Josefin Sans', sans-serif;
+  border-color: rgb(231, 198, 198);
+  background:#fff;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
 }
 
-form button:hover {
-    color: white;
-    background: rgb(255, 200, 0);
+#add-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1188d8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-
-.todo_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#task-display-container {
+  background-color: #1B1A1F;
+  border-radius: 5px;
+  padding: 20px;
+  border-radius: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.todo_list {
-    min-width: 30%;
-    list-style: none;
+#task-display-container h2 {
+  color: #f7f4f4;
 }
 
-.todos {
-    margin: 0.5rem;
-    padding-left: 0.5rem;
-    background: white;
-    color: black;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.5s;
-    border-radius: 2rem;
-}
-
-.todo_list {
-    flex: 1;
-}
-
-/*.trash-btn, 
-.complete-btn {
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-.complete-btn {
-    background: rgb(255, 200, 0);
-}
-
-.trash-btn {
-    border-top-right-radius: 1.75rem;
-    border-bottom-right-radius: 1.75rem;
-    background: rgb(171, 171, 171);
+#todo-list {
+  list-style-type: circle;
+  padding: 2px;
 }
 
 .todo-item {
-    padding: 0rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  background-size: 10vh;
+  background-color: #3d3d41;
+  color: #fff;
 }
 
-.fa-trash, 
-.fa-check-circle {
-    pointer-events: none;
+.todo-item.completed span {
+  opacity: 0.3;
+  text-decoration: line-through;
 }
 
-.completed {
-    text-decoration: line-through;
-    opacity: 0.5;
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  padding: 5px 10px;
 }
 
-.slide {
-    transform: translateX(10rem);
-    opacity: 0;
+.todo-item .buttons-container {
+  display: flex;
+  align-items: center;
+  margin: 10px;
 }
 
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    border: none;
+.todo-item button.delete-btn {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-.select {
-    margin: 1rem;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50px;
-}
 
-select {
-    color:rgb(255, 200, 0);
-    width: 10rem;
-    height: 3.2rem;
-    cursor: pointer;
-    padding: 1rem;
+.todo-item button.complete-btn {
+  padding: 5px 10px;
+  background-color: #1188d8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
 }
-
-.select::after {
-    content: "\25BC";
-    position: absolute;
-    background:rgb(255, 200, 0);
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
-
-.select::hover::after {
-    background: white;
-    color: rgb(255, 200, 0);
-}
-
